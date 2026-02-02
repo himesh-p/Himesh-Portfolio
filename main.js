@@ -21,6 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const card = document.getElementById("card");
+
+document.addEventListener("mousemove", (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+
+document.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateY(0deg) rotateX(0deg)";
+});
+
 function initTypewriter() {
     const typed = new Typed('#typed-summary', {
         strings: [

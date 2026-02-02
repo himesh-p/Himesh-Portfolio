@@ -49,6 +49,44 @@
             background-size: 400% 400%;
             animation: animate1 10s ease-in infinite;
         }
+        .perspective {
+            perspective: 1000px;
+        }
+
+        .card {
+            position: relative;
+            width: 320px;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        .avatar {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+        }
+
+        .badge {
+            position: absolute;
+            bottom: -12px;
+            right: -48px;
+            background: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .title {
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: bold;
+            color: #b87333;
+        }
+
 
         @keyframes animate1 {
 
@@ -196,12 +234,14 @@
                             Details</a>
                     </div>
                 </div>
-                <div class="relative">
-                    <img src="himesh.png" alt="Himesh - Aspiring Software Engineer"
-                        class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
-                    <div class="absolute border-2 border-navy -bottom-3 -right-12 bg-white p-4 rounded-xl shadow-lg">
-                        <div class="text-bold text-navy">Fresher</div>
-                        <div class="text-2xl font-bold text-copper">Software Engineer</div>
+                <div class="relative flex justify-center perspective">
+                    <div id="card" class="card">
+                        <img src="final4.png" alt="Himesh 3D Avatar" class="avatar">
+
+                        <div class="badge">
+                            <div class="title">Fresher</div>
+                            <div class="subtitle">Software Engineer</div>
+                        </div>
                     </div>
                 </div>
             </div>
