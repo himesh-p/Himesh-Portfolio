@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Abbas Hatim Ali | Civil Engineer</title>
+    <meta name="description"
+        content="Get in touch with Abbas Hatim Ali for your civil engineering projects. Available for freelance and full-time opportunities in Kuwait and internationally.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'copper': '#b45309',
+                        'warm-gray': '#6b7280',
+                        'charcoal': '#374151'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .availability-status {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-body text-charcoal">
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-display font-bold text-xl text-navy">Himesh Patel</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Home</a>
+                    <a href="index.html#education"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Education</a>
+                    <a href="index.html#skills"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Skills</a>
+                    <a href="index.html#certifications"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Certifications</a>
+                    <a href="contact.html"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Contact</a>
+                </div>
+                <button id="download-resume"
+                    class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors">Download
+                    Resume</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-navy text-white pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="font-display text-5xl font-bold mb-6">Get In Touch</h1>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Ready to discuss your next software project? I'm available for internships and entry-level
+                    opportunities. Let's build something great together.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Contact Card 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover section-reveal">
+                    <div class="w-16 h-16 bg-copper rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">📧</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Email</h3>
+                    <p class="text-warm-gray mb-4">Best way to reach me for project inquiries</p>
+                    <a href="mailto:abbashatimali03@gmail.com"
+                        class="text-copper font-medium hover:text-orange-600 transition-colors">
+                        himeshpatel0704@gmail.com
+                    </a>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div class="bg-gray-50 rounded-xal p-8 text-center card-hover section-reveal">
+                    <div class="w-16 h-16 bg-copper rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">📞</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Phone</h3>
+                    <p class="text-warm-gray mb-4">Available for any weekends</p>
+                    <div class="space-y-2">
+                        <div class="text-copper font-medium">India: +91 73590 67327</div>
+                    </div>
+                </div>
+
+                <!-- Contact Card 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover section-reveal">
+                    <div class="w-16 h-16 bg-copper rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">📍</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Location</h3>
+                    <p class="text-warm-gray mb-4">Currently based in Kalol</p>
+                    <div class="text-copper font-medium">Gandhinagar , Gujarat , India</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="font-display text-4xl font-bold text-navy mb-6">
+                    Frequently Asked Questions
+                </h2>
+                <div class="w-24 h-1 bg-copper mx-auto mb-8"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+
+                    <div class="bg-gray-50 rounded-xl p-6 section-reveal">
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            What types of projects do you typically work on?
+                        </h3>
+                        <p class="text-charcoal">
+                            I primarily work on backend and full-stack projects using Java,
+                            Spring Boot, and the MERN stack. My experience includes building
+                            RESTful APIs, authentication systems with JWT, microservices-based
+                            applications, and responsive web applications.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6 section-reveal">
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            Are you open to internships or entry-level roles?
+                        </h3>
+                        <p class="text-charcoal">
+                            Yes, I am actively seeking internships and entry-level software
+                            engineering roles. I am open to on-site, hybrid, and remote
+                            opportunities and willing to collaborate or relocate if required.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6 section-reveal">
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            What's your typical project timeline?
+                        </h3>
+                        <p class="text-charcoal">
+                            Project timelines depend on scope and complexity. Small applications
+                            usually take 2–4 weeks, medium full-stack projects take 1–3 months,
+                            and larger backend or MERN-based systems may take 3 months or more.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6 section-reveal">
+                        <h3 class="text-xl font-bold text-navy mb-3">
+                            Do you provide technical consultation or collaboration?
+                        </h3>
+                        <p class="text-charcoal">
+                            Yes, I’m open to technical discussions, project collaboration, and
+                            guidance related to backend development, APIs, databases, and system
+                            design. Collaboration can be done remotely or as part of a team.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 opacity-90">Don't hesitate to reach out. I'm here to help bring your construction
+                vision to reality with professional expertise and quality workmanship.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:himeshpatel0704@gmail.com"
+                    class="bg-copper text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium">
+                    Email Directly
+                </a>
+                <a href="tel:+917359067327"
+                    class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-navy transition-colors font-medium">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <h3 class="font-display text-2xl font-bold mb-2">Himesh Patel</h3>
+                <p class="text-warm-gray">Computer Engineer - Fresher Software Engineer</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:himeshpatel0704@gmail.com" class="text-warm-gray hover:text-copper transition-colors">
+                    📧 Email
+                </a>
+                <a href="tel:+917359067327" class="text-warm-gray hover:text-copper transition-colors">
+                    📞 India
+                </a>
+            </div>
+            <div class="text-warm-gray text-sm">
+                © 2026 Himesh Patel. Built with ❤️ | Kalol, Gandhinagar, Gujarat, India
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            initScrollAnimations();
+            initDownloadButton();
+        });
+
+
+        function validateForm(data) {
+            let isValid = true;
+
+            // Check required fields
+            const requiredFields = ['firstName', 'lastName', 'email', 'message', 'terms'];
+            requiredFields.forEach(field => {
+                if (!data[field]) {
+                    showFieldError(field, 'This field is required');
+                    isValid = false;
+                }
+            });
+
+            // Validate email
+            if (data.email && !isValidEmail(data.email)) {
+                showFieldError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Validate phone if provided
+            if (data.phone && !isValidPhone(data.phone)) {
+                showFieldError('phone', 'Please enter a valid phone number');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+
+            clearFieldError(field);
+
+            if (field.required && !value) {
+                showFieldError(fieldName, 'This field is required');
+                return false;
+            }
+
+            if (fieldName === 'email' && value && !isValidEmail(value)) {
+                showFieldError(fieldName, 'Please enter a valid email address');
+                return false;
+            }
+
+            if (fieldName === 'phone' && value && !isValidPhone(value)) {
+                showFieldError(fieldName, 'Please enter a valid phone number');
+                return false;
+            }
+
+            return true;
+        }
+
+        function showFieldError(fieldName, message) {
+            const field = document.querySelector(`[name="${fieldName}"]`);
+            const errorDiv = field.parentNode.querySelector('.field-error') || document.createElement('div');
+
+            errorDiv.className = 'field-error text-red-500 text-sm mt-1';
+            errorDiv.textContent = message;
+
+            if (!field.parentNode.querySelector('.field-error')) {
+                field.parentNode.appendChild(errorDiv);
+            }
+
+            field.classList.add('border-red-500');
+        }
+
+        function clearFieldError(field) {
+            const errorDiv = field.parentNode.querySelector('.field-error');
+            if (errorDiv) {
+                errorDiv.remove();
+            }
+            field.classList.remove('border-red-500');
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+        }
+
+        function submitForm(data) {
+            // Show loading state
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual submission)
+            setTimeout(() => {
+                showNotification('Thank you for your message! I will get back to you within 24 hours.', 'success');
+                document.getElementById('contact-form').reset();
+
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 max-w-sm ${type === 'success' ? 'bg-green-500 text-white' :
+                    type === 'error' ? 'bg-red-500 text-white' :
+                        'bg-blue-500 text-white'
+                }`;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+                notification.style.transition = 'transform 0.3s ease';
+            }, 100);
+
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 5000);
+        }
+
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Download resume functionality
+        function initDownloadButton() {
+            const downloadBtn = document.getElementById('download-resume');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function () {
+                    const resumePath = 'resume.html';
+
+                    window.open(resumePath, '_blank');
+                });
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himesh Patel - Computer Engineer | Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Fresher Computer Engineer experties in MERN STACK DEV , Backend Dev , Spring-Boot, and Java Dev. Available for projects in Ahemdabad,Gujarat.">
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'copper': '#b45309',
+                        'warm-gray': '#6b7280',
+                        'charcoal': '#374151'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .himesh-bg {
+            background: linear-gradient(135deg, #a4b5e6 0%, #5c93f1 50%, #f5954c 100%);
+            background-size: 400% 400%;
+            animation: animate1 10s ease-in infinite;
+        }
+
+        @keyframes animate1 {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-bar {
+            width: 0%;
+            transition: width 2s ease-in-out;
+        }
+
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .section-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease-out;
+        }
+
+        .typing-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #1e3a8a;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background: linear-gradient(to bottom, #1e3a8a, transparent);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-body text-charcoal">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-bold text-xl text-copper">Himesh Patel</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-charcoal hover:text-navy font-body transition-colors">Home</a>
+                    <a href="#education"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Education</a>
+                    <a href="#skills"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Skills</a>
+                    <a href="#certifications"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Certifications</a>
+                    <a href="contact.html"
+                        class="nav-link text-charcoal hover:text-navy font-body transition-colors">Contact</a>
+                </div>
+                <button id="download-resume" class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition-colors">Download
+                    Resume</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Section -->
+    <section id="home" class="himesh-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        <span class="block">HIMESH KUMAR</span>
+                        <span class="block text-navy">PATEL</span>
+                    </h1>
+                    <div class="text-xl lg:text-2xl mb-8 font-light">
+                        <span id="typed-summary"></span>
+                    </div>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="bg-copper/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+                            📞 +917359067327
+                        </span>
+                        <span class="bg-copper/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+                            📧 himeshpatel@gmail.com
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#"
+                            class="bg-copper text-white px-8 py-3 rounded-lg hover:bg-orange-800 transition-colors font-medium">Contact
+                            Me</a>
+                        <a href="#skills"
+                            class="bg-navy border-2 border-white text-white px-8 py-3 rounded-lg hover:text-copper hover:border-copper transition-colors font-medium">View
+                            Details</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="himesh.png" alt="Himesh - Aspiring Software Engineer"
+                        class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    <div class="absolute border-2 border-navy -bottom-3 -right-12 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="text-bold text-navy">Fresher</div>
+                        <div class="text-2xl font-bold text-copper">Software Engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="font-display text-4xl font-bold text-copper mb-6">Professional Summary</h2>
+                <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8 section-reveal">
+                    <p class="text-lg leading-relaxed text-charcoal">
+                        Motivated Computer Engineering fresher with interest in software development and full-stack web
+                        technologies.
+                    </p>
+                    <p class="text-lg leading-relaxed text-charcoal mt-6">
+                        Practical experience in <strong>Java, JavaScript, React, Node.js, Express Js, Spring Frameworks,
+                            MongoDB, SQL, and RESTful APIs </strong>. Skilled in application development, debugging, and
+                        version control, with exposure to real-world projects. Demonstrates the ability to analyze
+                        requirements, implement solutions, and deliver quality output within deadlines.
+                    </p>
+                    <p class="text-lg leading-relaxed text-charcoal mt-6">
+                        Strong in backend logic, REST API development, database operations, and debugging workflows.
+                        Skilled in MERN stack, Java programming, Git/GitHub, and development tools. Adept at working in
+                        collaborative environments, following Agile practices, and writing clean, scalable code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="font-display text-4xl font-bold text-copper mb-6">Education Details</h2>
+                <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12">
+                    <!-- College -->
+                    <div class="timeline-item section-reveal">
+                        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-copper font-bold text-2xl">BE Computer Engineering</h3>
+                                    <p class="text-navy text-lg font-medium">Goverment Engineering College, Gandhinagar
+                                    </p>
+                                </div>
+                                <div>
+                                    Aug-2023 - present | Gandhinagar,Sector-28
+                                </div>
+                            </div>
+                            <ul class="space-y-2 text-charcoal">
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Currently pursuing Bachelor of Engineering in Computer Engineering at Goverment
+                                    Engineering College, Gandhinagar which situated in Sector-28,Gandhinagar.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Actively learning and applying concepts of databases, operating systems, computer
+                                    networks, and object-oriented programming.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Strong academic background with interest in full-stack development and emerging
+                                    technologies.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Continuously improving problem-solving and coding skills through self-learning and
+                                    projects.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Studying core computer engineering subjects including Data Structures, Algorithms,
+                                    DBMS, OS, and Computer Networks.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Participating in academic projects, coding practice, and technical learning to build
+                                    industry-ready skills.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 11-12th -->
+                    <div class="timeline-item section-reveal">
+                        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-copper font-bold text-2xl">Higher Secandory (12<sup>th</sup>
+                                        Science)</h3>
+                                    <p class="text-navy text-lg font-medium">Sahajanand School Of Achiever, Gandhinagar
+                                    </p>
+                                </div>
+                                <div>
+                                    May-2021 - April-2023 | Sargasan, Gandhinagar
+                                </div>
+                            </div>
+                            <ul class="space-y-2 text-charcoal">
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Completed higher secondary education with a Science stream, focusing on Physics,
+                                    Chemistry, and Mathematics.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Achieved strong academic performance in board examinations.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    And achieved 12th Board: 93.34 PR | GUJCET: 94.6 PR
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Developed logical thinking and quantitative skills applicable to computer
+                                    engineering and competitive examinations.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Built a strong analytical and problem-solving foundation essential for engineering
+                                    and technical studies.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 11-12th -->
+                    <div class="timeline-item section-reveal">
+                        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-copper font-bold text-2xl">Primary Secandory</h3>
+                                    <p class="text-navy text-lg font-medium">ST.XAVIER'S HIGH SCHOOL , KALOL</p>
+                                </div>
+                                <div>
+                                    March-2021 | Kalol, Gandhinagar
+                                </div>
+                            </div>
+                            <ul class="space-y-2 text-charcoal">
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Completed Primary and Secondary education (Classes 1–10) at St. Xavier’s High
+                                    School, Kalol.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Built a strong foundation in Mathematics, Science, and English.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Actively participated in school activities, improving teamwork and discipline.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    Developed logical thinking and problem-solving skills through academics.
+                                </li>
+                                <li class="flex items-start text-warm-gray">
+                                    <span class="text-navy mr-2">•</span>
+                                    This education laid the groundwork for further studies in Computer Engineering.
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="font-display text-4xl font-bold text-copper mb-6">Core Competencies & Skills</h2>
+                <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="section-reveal">
+                    <h3 class="text-2xl font-bold text-copper mb-6">Technical Proficiency</h3>
+                    <div id="skills-chart" class="h-96 bg-gray-50 rounded-xl p-4"></div>
+                </div>
+
+                <div class="section-reveal">
+                    <h3 class="text-2xl font-bold text-copper mb-6">Core Competencies</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">MERN STACK</span>
+                                    <span class="text-copper font-mono text-sm">Mastery</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="98%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">Advanced SQL</span>
+                                    <span class="text-copper font-mono text-sm">Advanced</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">Database Managment</span>
+                                    <span class="text-copper font-mono text-sm">Expert</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">Rest Api</span>
+                                    <span class="text-copper font-mono text-sm">Professional</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">Spring boot</span>
+                                    <span class="text-copper font-mono text-sm">Expert</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-charcoal">AWS Cloud</span>
+                                    <span class="text-copper font-mono text-sm">Skilled</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-navy h-2 rounded-full" data-width="83%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-navy section-reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white text-center mb-10">
+                Certifications
+            </h2>
+            <div class="w-24 h-1 bg-copper mx-auto mb-8"></div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Java Programming
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Oracle Certified
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-700">
+                        Professional
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Structure Query Langauge
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-emerald-100 text-emerald-700">
+                        Advanced
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Spring Boot Framework
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+                        Expert
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        React Js
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+                        Mastery
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Node Js
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+                        Mastery
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Express Js
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+                        Mastery
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        MongoDB
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-700">
+                        Professional
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        JavaScript
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">
+                        Expert
+                    </span>
+                </div>
+
+                <div
+                    class="certificate-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">
+                        Data Structure & Algorithms
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        Royal Technosoft
+                    </p>
+                    <span
+                        class="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-emerald-100 text-emerald-700">
+                        Advanced
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <h3 class="font-display text-2xl font-bold mb-2">Himesh Patel</h3>
+                <p class="text-warm-gray">Computer Engineer - Fresher Software Engineer</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:himeshpatel0704@gmail.com" class="text-warm-gray hover:text-copper transition-colors">
+                    📧 Email
+                </a>
+                <a href="tel:+917359067327" class="text-warm-gray hover:text-copper transition-colors">
+                    📞 India
+                </a>
+            </div>
+            <div class="text-warm-gray text-sm">
+                © 2026 Himesh Patel. Built with ❤️ | Kalol, Gandhinagar, Gujarat, India
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

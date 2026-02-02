@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Himesh Patel | Resume</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      margin: 0;
+      padding: 0;
+    }
+
+    .resume {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .header a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      color: #1e3a8a;
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .sub-title {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .resume {
+        box-shadow: none;
+        margin: 0;
+      }
+    }
+    .print-btn-wrapper {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .print-btn-wrapper button {
+        background: #1b1e27;
+        color: #ffffff;
+        border: none;
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        }
+
+    .print-btn-wrapper button:hover {
+        background: #2563eb;
+    }
+
+    /* Hide button while printing */
+    @media print {
+    .print-btn-wrapper {
+        display: none;
+    }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+    <!-- Print Button -->
+    <div class="print-btn-wrapper">
+        <button onclick="printResume()">⬇ Print / Download</button>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>PATEL HIMESHKUMAR ANILKUMAR</h1>
+      <p>Kalol, Gandhinagar, Gujarat</p>
+      <p>📞 +91 73590 67327 | ✉️ himeshpatel0704@gmail.com</p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/himesh-patel12" target="_blank">
+          linkedin.com/in/himesh-patel12
+        </a>
+        |
+        GitHub:
+        <a href="https://github.com/himesh-p" target="_blank">
+          github.com/himesh-p
+        </a>
+      </p>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <p class="meta">
+        Motivated Computer Engineering undergraduate with strong foundations in Java,
+        Spring Boot, and MERN Stack development. Hands-on experience in building secure
+        RESTful APIs, microservices-based systems, and full-stack web applications.
+        Seeking an entry-level software engineering role to grow in a challenging environment.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2>Education</h2>
+
+      <p class="sub-title">Bachelor of Engineering – Computer Engineering</p>
+      <p class="meta">Government Engineering College, Gandhinagar (GTU)</p>
+      <p class="meta">August 2023 – Present | CGPA: 8.30</p>
+
+      <br/>
+
+      <p class="sub-title">Higher Secondary Certificate (Class 12 – Science)</p>
+      <p class="meta">Sahajanand School of Achiever, Gandhinagar</p>
+      <p class="meta">93.34 Percentile | GUJCET: 94.6 Percentile</p>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <h2>Technical Skills</h2>
+
+      <div class="skills-grid">
+        <div>
+          <strong>Java & Backend</strong>
+          <ul>
+            <li>Java, JSP, Servlet</li>
+            <li>Spring Boot, Spring Framework</li>
+            <li>REST APIs, JWT Authentication</li>
+            <li>Microservices Architecture</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Frontend & JS</strong>
+          <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React.js</li>
+            <li>Node.js, Express.js</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Languages & DSA</strong>
+          <ul>
+            <li>C, C++, Python</li>
+            <li>Data Structures & Algorithms</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Databases & Tools</strong>
+          <ul>
+            <li>MySQL, Oracle SQL, PL/SQL</li>
+            <li>MongoDB</li>
+            <li>Git, GitHub, Postman</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h2>Projects</h2>
+
+      <p class="sub-title">Weather Application</p>
+      <ul>
+        <li>Real-time API-based weather application</li>
+        <li>City search, temperature, humidity display</li>
+        <li>Focused on clean UI and error handling</li>
+      </ul>
+
+      <br/>
+
+      <p class="sub-title">Bakery Management System</p>
+      <ul>
+        <li>Spring Boot backend with JWT authentication</li>
+        <li>Microservices-based architecture</li>
+        <li>REST APIs for users, products, and orders</li>
+      </ul>
+
+      <br/>
+
+      <p class="sub-title">E-Commerce Website</p>
+      <ul>
+        <li>Full-stack MERN application</li>
+        <li>User authentication, cart, order management</li>
+        <li>REST API integration</li>
+      </ul>
+    </div>
+
+    <!-- Internship -->
+    <div class="section">
+      <h2>Internship</h2>
+
+      <p class="sub-title">MERN Stack Intern</p>
+      <p class="meta">Grownited Pvt. Ltd., Ahmedabad</p>
+      <p class="meta">December 2025 – Present</p>
+
+      <ul>
+        <li>Developing MERN stack applications</li>
+        <li>Building REST APIs & frontend components</li>
+        <li>Using Git/GitHub for collaboration</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>
+          Professional certifications from Royal Technosoft Pvt. Ltd.
+          (Java, Web Development, Backend & Full-Stack)
+        </li>
+      </ul>
+    </div>
+
+    <!-- Additional -->
+    <div class="section">
+      <h2>Additional Details</h2>
+      <ul>
+        <li>Strong understanding of OOP & backend architecture</li>
+        <li>API testing, debugging, and version control</li>
+        <li>Quick learner with passion for continuous improvement</li>
+      </ul>
+    </div>
+
+  </div>
+  <script>
+    function printResume() {
+        window.print();
+    }
+  </script>
+</body>
+</html>
